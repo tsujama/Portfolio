@@ -1,0 +1,5 @@
+@use '../../styles/mixins' as mixins;
+
+.about {
+    @include mixins.section-background();
+}

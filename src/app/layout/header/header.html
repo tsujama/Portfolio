@@ -1,1 +1,64 @@
-<p>header works!</p>
+<header id="header" class="header">
+
+  <!-- Top row -->
+  <div class="header-top">
+
+    <a class="logo" href="/">
+      MR
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [class.active]="menuOpen"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Open or close menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Expandable menu -->
+  <div class="menu-content" [class.open]="menuOpen">
+
+    <nav class="navigation">
+      <a href="#about" (click)="closeMenu()">About me</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#projects" (click)="closeMenu()">Projects</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <!-- Language switch -->
+    <div class="language-switch">
+      <span class="language-de">DE</span>
+
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+
+      <span class="language-en">EN</span>
+    </div>
+
+    <!-- Social media links -->
+    <div class="social-links">
+      <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+        in
+      </a>
+
+      <a href="https://github.com/" aria-label="GitHub">
+        GH
+      </a>
+
+      <a href="mailto:deine-email@example.com" aria-label="Email">
+        @
+      </a>
+    </div>
+
+  </div>
+
+</header>
