@@ -1,3 +1,4 @@
+
 @use '../../styles/variables' as *;
 
 :host {
@@ -14,8 +15,6 @@
   color: $text-white;
 }
 
-// header top
-
 .header-top {
   display: flex;
   align-items: center;
@@ -29,7 +28,7 @@
   font-size: 1.4rem;
 }
 
-// burger menu
+// Burger Menu
 
 .menu-toggle {
   display: flex;
@@ -46,8 +45,8 @@
   span {
     width: 100%;
     height: 2px;
-    background-color: $text-white;
-    transition: all 0.3s ease;
+    background: $text-white;
+    transition: 0.3s;
   }
 
   &.active {
@@ -65,33 +64,31 @@
   }
 }
 
-// burger menu icon change
-
-.menu-toggle:has(+ .menu-content.open) {
-  span:first-child {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  span:nth-child(2) {
-    opacity: 0;
-  }
-
-  span:last-child {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-
-// Menu content
+// Menu
 
 .menu-content {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75vh;
+  z-index: -1;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 35px;
-  padding: 40px 0 20px;
+
+  background-image: url("/Design material/01_Background/Design Size Relation@3x/01_Hero.webp");
+  background-size: cover;
+  background-position: center;
+
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
 
   &.open {
-    display: flex;
+    transform: translateY(0);
   }
 }
 
@@ -122,7 +119,6 @@
   .language-de,
   .language-en {
     color: $text-white;
-    transition: color 0.3s ease;
   }
 
   &:has(input:not(:checked)) .language-de {
@@ -150,10 +146,9 @@
     position: absolute;
     inset: 0;
     cursor: pointer;
-    background-color: $color-tertiary;
+    background: $color-tertiary;
     border: 1px solid $text-white;
     border-radius: 30px;
-    transition: 0.3s;
 
     &::before {
       content: '';
@@ -162,7 +157,7 @@
       height: 20px;
       left: 3px;
       bottom: 3px;
-      background-color: $color-secondary;
+      background: $color-secondary;
       border: 1px solid $text-white;
       border-radius: 50%;
       transition: 0.3s;
@@ -178,7 +173,6 @@
 
 .social-links {
   display: flex;
-  align-items: center;
   gap: 25px;
 
   a {

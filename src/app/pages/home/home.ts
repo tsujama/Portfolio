@@ -4,9 +4,10 @@ import { About } from '../../sections/about/about';
 import { Skills } from '../../sections/skills/skills';
 import { Projects } from '../../sections/projects/projects';
 import { Contact } from '../../sections/contact/contact';
+import { Thoughts } from '../../sections/thoughts/thoughts';
 
 @Component({
-  imports: [Hero, About, Skills, Projects, Contact],
+  imports: [Hero, About, Skills, Projects, Thoughts, Contact],
   selector: 'app-home',
   styleUrl: './home.scss',
   templateUrl: './home.html',

@@ -1,5 +1,12 @@
 @use '../../styles/mixins' as mixins;
 
 .hero {
-    @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
+    @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/01_Hero.webp");
+    display: flex;
+    align-items: end;
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 75px);
+    width: 100%;
 }
