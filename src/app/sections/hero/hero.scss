@@ -1,12 +1,36 @@
 @use '../../styles/mixins' as mixins;
+@use "../../styles/variables" as vars;
+@use "../../styles/fonts" as fonts;
 
 .hero {
     @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/01_Hero.webp");
     display: flex;
     align-items: end;
+    color: vars.$text-white;
+}
+
+.title {
+    font-size: vars.$font-6xl;
 }
 
 .content-wrapper {
     min-height: calc(100vh - 75px);
     width: 100%;
+    //padding: vars.$padding-xl vars.$padding-m;
+    padding: 130px 16px;
+}
+
+.img-wrapper {
+    width: 75%;
+    padding: vars.$padding-m;
+    background-color: white;
+    transform: rotate(7deg);
+}
+
+p {
+    font-family: fonts.$font-secondary;
+    font-weight: 600;
+    font-size: vars.$font-3xl;
+    margin-top: 16px;
+    color: black;
 }

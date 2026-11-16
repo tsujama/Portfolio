@@ -1,0 +1,21 @@
+@use "./variables" as vars;
+
+.btn {
+    border-radius: 50px;
+    padding: vars.$padding-s vars.$padding-m;
+    background-color: transparent;
+
+    &-white {
+        color: vars.$text-white;
+        border: 1px solid vars.$text-white;
+    }
+
+    &-black {
+        color: vars.$text-black;
+        border: 1px solid vars.$text-black;
+    }
+
+    &-shadow {
+        box-shadow: 2px 3px;
+    }
+}

@@ -1,0 +1,34 @@
+// Bricolage Grotesque
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../../../public/fonts/bricolage-grotesque/BricolageGrotesque.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Kalam
+@font-face {
+  font-family: 'Kalam';
+  src: url('../../../public/fonts/kalam/Kalam-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('../../../public/fonts/kalam/Kalam-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('../../../public/fonts/kalam/Kalam-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+// Variables
+$font-primary: 'Bricolage Grotesque', sans-serif;
+$font-secondary: 'Kalam', cursive;

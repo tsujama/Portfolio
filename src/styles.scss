@@ -1,5 +1,14 @@
+@use "./app/styles/buttons";
+@use './app/styles/utilities';
+@use './app/styles/fonts' as fonts;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+  font-family: fonts.$font-primary;
+  font-weight: 400;
 }
