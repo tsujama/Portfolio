@@ -10,13 +10,16 @@ $color-primary: #BAE011;
 $color-secondary: #7E4AE7;
 $color-tertiary: #E08C05;
 
-// Paddings
+// Spacings
 
-$padding-none: 0;
-$padding-s: 8px;
-$padding-m: 16px;
-$padding-l: 32px;
-$padding-xl: 64px;
+$spacing-none: 0;
+$spacing-s: 0.5rem;
+$spacing-m: 1rem;
+$spacing-l: 2rem;
+$spacing-xl: 4rem;
+$spacing-2xl: 6rem;
+$spacing-3xl: 8rem;
+$spacing-4xl: 10rem;
 
 // Font sizes
 $font-xs: 0.75rem;

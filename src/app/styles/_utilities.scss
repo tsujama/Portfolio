@@ -1,27 +1,28 @@
-//flexbox alignment
+@use "./variables" as vars;
 
-.flex-start {
+
+// Flexbox
+
+.flex {
     display: flex;
-    gap: 32px;
 }
 
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
 }
 
 .flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .flex-column {
@@ -29,10 +30,47 @@
 }
 
 
-// item positioning
+// Flexbox gaps
+
+.gap-s {
+    gap: vars.$spacing-s;
+}
+
+.gap-m {
+    gap: vars.$spacing-m;
+}
+
+.gap-l {
+    gap: vars.$spacing-l;
+}
+
+.gap-xl {
+    gap: vars.$spacing-xl;
+}
+
+// general spacing 
+
+.margin-s {
+    margin-bottom: vars.$spacing-s;
+}
+
+.margin-m {
+    margin-bottom: vars.$spacing-m;
+}
+
+.margin-l {
+    margin-bottom: vars.$spacing-l;
+}
+
+.margin-xl {
+    margin-bottom: vars.$spacing-xl;
+}
+
+
+// Item positioning
 
 .left {
-    align-self: self-start;
+    align-self: flex-start;
 }
 
 .middle {
@@ -40,5 +78,30 @@
 }
 
 .right {
-    align-self: self-end;
+    align-self: flex-end;
+}
+
+
+// Section spacing
+
+.section-padding {
+    padding: 7rem 1rem;
+}
+
+
+// Typography
+
+.heading-h2 {
+    font-size: vars.$font-4xl;
+    margin-bottom: vars.$spacing-l;
+}
+
+// colors 
+
+.text-black {
+    color: vars.$text-black;
+}
+
+.text-white {
+    color: vars.$text-white;
 }

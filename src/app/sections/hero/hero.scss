@@ -16,13 +16,11 @@
 .content-wrapper {
     min-height: calc(100vh - 75px);
     width: 100%;
-    //padding: vars.$padding-xl vars.$padding-m;
-    padding: 130px 16px;
 }
 
 .img-wrapper {
     width: 75%;
-    padding: vars.$padding-m;
+    padding: vars.$spacing-m;
     background-color: white;
     transform: rotate(7deg);
 }
@@ -31,6 +29,6 @@ p {
     font-family: fonts.$font-secondary;
     font-weight: 600;
     font-size: vars.$font-3xl;
-    margin-top: 16px;
+    margin-top: vars.$spacing-m;
     color: black;
 }

@@ -1,5 +1,64 @@
 @use '../../styles/mixins' as mixins;
+@use "../../styles/variables" as vars;
 
 .about {
     @include mixins.section-background();
+}
+
+.heading-underline {
+    position: relative;
+    display: block;
+    width: fit-content;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+
+        width: 100%;
+        height: 12px;
+
+        background-image: url('/Design material/00_Hand-drawn lines/01_About me/Color option 2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+}
+
+.wrapper {
+    height: 400px;
+
+    p {
+        color: vars.$text-white;
+        padding: vars.$spacing-none;
+    }
+}
+
+.ripped-paper-1,
+.ripped-paper-2,
+.ripped-paper-3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30%;
+}
+
+.ripped-paper-1 {
+    background-image: url("/Design material/02_Ripped Paper/Option 2/Mobile/About me 1.webp");
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+.ripped-paper-2 {
+    background-image: url("/Design material/02_Ripped Paper/Option 2/Mobile/About me 2.webp");
+    margin-top: -48px;
+    z-index: 2;
+}
+
+.ripped-paper-3 {
+    background-image: url("/Design material/02_Ripped Paper/Option 2/Mobile/About me 3.webp");
+    margin-top: -48px;
+     transform: rotate(5deg);
 }

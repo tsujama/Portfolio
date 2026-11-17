@@ -1,12 +1,26 @@
-<section id="skills" class="skills">
-    <p>My Stack</p>
-    <h2>Skill set</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste incidunt voluptatum dignissimos 
-        quidem exercitationem aperiam totam vero magni, quos similique natus quasi aliquid reiciendis 
-        voluptatem iusto quo nulla! Iusto, quia.
-    </p>
-    <div>
-        B I L D E R  TECH STACK
+<section id="skills" class="skills text-white">
+    <div class="content-wrapper section-padding">
+        <div class="flex flex-column">
+            <p class="margin-s right">MY STACK</p>
+            <h2 class="heading-h2 circled right">Skill set</h2>
+        </div>
+        <div>
+            <p class="text-black background margin-l">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste incidunt voluptatum dignissimos
+                quidem exercitationem aperiam totam vero magni, quos similique natus quasi aliquid reiciendis
+                voluptatem iusto quo nulla! Iusto, quia.
+            </p>
+        </div>
+        <div class="tech-grid">
+            @for (tech of techStack; track tech.name) {
+            <div class="tech-item">
+                <img [src]="tech.img" [alt]="tech.name">
+                <span>{{ tech.name }}</span>
+            </div>
+            }
+            <div class="pull-to-peel">
+                <img src="/assets/icons/Default_sticker.png" alt="Pull to peel sticker">
+            </div>
+        </div>
     </div>
-    <span>Pull to peel</span>
 </section>

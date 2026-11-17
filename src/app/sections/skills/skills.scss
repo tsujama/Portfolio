@@ -1,5 +1,66 @@
 @use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
 
 .skills {
     @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/03_Skills.webp");
+}
+
+.circled {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/Design material/00_Hand-drawn lines/02_Skills/Color option 2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scaleX(-1);
+        z-index: -1;
+    }
+}
+
+.background {
+    @include mixins.div-background("/Design material/02_Ripped Paper/1B.Mobile.png");
+    padding: vars.$spacing-l vars.$spacing-m;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: vars.$spacing-m;
+    padding-bottom: vars.$spacing-2xl;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$spacing-s;
+
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    span {
+        text-align: center;
+    }
+}
+
+.pull-to-peel {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    img {
+        padding-top: 50px;
+        padding-right: 8px;
+        object-fit: contain;
+        transform: rotate(10deg);
+    }
 }
