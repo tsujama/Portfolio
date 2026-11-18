@@ -1,22 +1,28 @@
 <section id="thoughts" class="thoughts">
-    <p>In their words</p>
-    <h2>Colleagues' Thoughts</h2>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste incidunt voluptatum dignissimos 
-        quidem exercitationem aperiam totam vero magni, quos similique natus quasi aliquid reiciendis 
-        voluptatem iusto quo nulla! Iusto, quia.
-        </p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste incidunt voluptatum dignissimos 
-        quidem exercitationem aperiam totam vero magni, quos similique natus quasi aliquid reiciendis 
-        voluptatem iusto quo nulla! Iusto, quia.
-        </p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste incidunt voluptatum dignissimos 
-        quidem exercitationem aperiam totam vero magni, quos similique natus quasi aliquid reiciendis 
-        voluptatem iusto quo nulla! Iusto, quia.
-        </p>
+    <div class="content-wrapper flex-end flex-column">
+        <p class="thoughts-eyebrow margin-m">IN THEIR WORDS:</p>
+        <h2 class="heading-h2 text-align heading-underline">Colleagues' Thoughts</h2>
+        <div class="thoughts-wrapper middle">
+            @for (thought of thoughts; track thought.name) {
+            <div class="thoughts-item" 
+            [style.transform]="'rotate(' + thought.rotation + ')'"
+            [style.background-image]="'url(&quot;' + thought.backgroundImg + '&quot;)'"
+            >
+                <p>{{ thought.text }}</p>
+                <div class="colleague-wrapper">
+                    <div>
+                        <p class="bold">{{ thought.name }}</p>
+                        <p>{{ thought.position }}</p>
+                    </div>
+                    <div>
+                        <p class="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <a [href]="thought.linkedin">Profile</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
     </div>
 </section>

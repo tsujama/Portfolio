@@ -1,0 +1,84 @@
+@use "../../styles/variables" as vars;
+
+.thoughts {
+    padding: vars.$spacing-none vars.$spacing-m 7rem;
+}
+
+.text-align {
+    text-align: end;
+}
+
+.thoughts-eyebrow {
+    position: relative;
+    width: fit-content;
+    align-self: flex-end;
+
+    &::before {
+        content: "";
+        position: absolute;
+
+        width: 80px;
+        height: 55px;
+
+        left: -85px;
+        top: 100%;
+        transform: translateY(-50%);
+
+        background-image: url('/Design material/00_Hand-drawn lines/04_Testimonials/Color option 2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.thoughts-item {
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 350px;
+    padding: 32px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:nth-child(1) {
+        z-index: 3;
+    }
+
+    &:nth-child(2) {
+        z-index: 2;
+    }
+
+    &:nth-child(3) {
+        z-index: 1;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: -5px;
+    }
+
+}
+
+.colleague-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.linkedin {
+    display: flex;
+    gap: vars.$spacing-s;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: vars.$text-black;
+        cursor: pointer;
+    }
+}

@@ -1,6 +1,5 @@
 @use "./variables" as vars;
 
-
 // Flexbox
 
 .flex {
@@ -22,13 +21,12 @@
 .flex-end {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .flex-column {
     flex-direction: column;
 }
-
 
 // Flexbox gaps
 
@@ -66,7 +64,6 @@
     margin-bottom: vars.$spacing-xl;
 }
 
-
 // Item positioning
 
 .left {
@@ -81,19 +78,18 @@
     align-self: flex-end;
 }
 
-
 // Section spacing
 
 .section-padding {
-    padding: 7rem 1rem;
+    padding: vars.$spacing-2xl vars.$spacing-m;
 }
-
 
 // Typography
 
 .heading-h2 {
     font-size: vars.$font-4xl;
     margin-bottom: vars.$spacing-l;
+    width: fit-content;
 }
 
 // colors 

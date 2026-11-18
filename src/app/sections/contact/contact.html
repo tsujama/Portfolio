@@ -1,11 +1,43 @@
-<section id="contact" class="contact">
-    <p>Contact Me</p>
-    <p>IMG</p>
-    <h2>Ready to work together?</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Minus vitae, dolor magni quae hic nesciunt enim voluptatem! 
-        Veniam similique corrupti officiis, quasi reiciendis dolorem. 
-        Dolorum fuga facilis quod nostrum iure.
-    </p>
-    <p>FORM</p>
+<section id="contact" class="contact text-white">
+    <div class="section-padding">
+        <div class="flex-between margin-m">
+            <p>CONTACT ME</p>
+            <p>IMG</p>
+        </div>
+        <h2 class="heading-h2">Ready to work together?</h2>
+        <p class="margin-l">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Minus vitae, dolor magni quae hic nesciunt enim voluptatem!
+            Veniam similique corrupti officiis, quasi reiciendis dolorem.
+            Dolorum fuga facilis quod nostrum iure.
+        </p>
+        
+        <form class="contact-form flex flex-column gap-s">
+            <div class="form-group gap-s">
+                <label for="name">What's your name?</label>
+                <input type="text" id="name" name="name" placeholder="Your name goes here">
+            </div>
+
+            <div class="form-group gap-s">
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" name="email" placeholder="youremail@email.com">
+            </div>
+
+            <div class="form-group gap-s margin-l">
+                <label for="text">How can I help you?</label>
+                <input type="text" id="text" name="text" placeholder="Hello Michelle, I am interested in...">
+            </div>
+
+            <div class="privacy-group gap-s margin-l">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy">
+                <label for="privacyPolicy">
+                    I've read the <a href="#">privacy policy</a> and agree to the
+                    processing of my data as outlined.
+                </label>
+            </div>
+            <div class="submit-wrapper flex gap-l">
+                <img src="\Design material\00_Hand-drawn lines\05_Contact\Color option 2.png" width="50%">
+                <input class="btn btn-white btn-shadow" type="submit" value="Send">
+            </div>
+        </form>
+    </div>
 </section>

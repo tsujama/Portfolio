@@ -1,41 +1,18 @@
 <section id="projects" class="projects">
-    <p>My Craft</p>
-    <h2>Projects</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laudantium distinctio nisi? 
-        Vel in aperiam rerum libero, blanditiis veritatis doloribus temporibus nobis inventore, 
-        aliquam, alias sunt velit quis voluptatum magni.
-    </p>
-    <article>
-        <div>
-            BILD
-        </div>
-        <h3>Join</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, id possimus. Sit, praesentium! Cumque, est. 
-            Fugit fuga eius sint vero voluptas exercitationem reiciendis, aspernatur, itaque blanditiis quo, assumenda 
-            ea nobis.
+    <div class="content-wrapper section-padding">
+        <p class="margin-s">MY CRAFT</p>
+        <h2 class="heading-h2 heading-underline">Projects</h2>
+        <p class="margin-l">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laudantium distinctio nisi?
+            Vel in aperiam rerum libero, blanditiis veritatis doloribus temporibus nobis inventore,
+            aliquam, alias sunt velit quis voluptatum magni.
         </p>
-        <button>Project details</button>
-    </article>
-    <article>
-        <div>
-            BILD
-        </div>
-        <h3>El Pollo Loco</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, id possimus. Sit, praesentium! Cumque, est. 
-            Fugit fuga eius sint vero voluptas exercitationem reiciendis, aspernatur, itaque blanditiis quo, assumenda 
-            ea nobis.
-        </p>
-        <button>Project details</button>
-    </article>
-    <article>
-        <div>
-            BILD
-        </div>
-        <h3>DABubble</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, id possimus. Sit, praesentium! Cumque, est. 
-            Fugit fuga eius sint vero voluptas exercitationem reiciendis, aspernatur, itaque blanditiis quo, assumenda 
-            ea nobis.
-        </p>
-        <button>Project details</button>
-    </article>
+        @for (project of projects; track project.name) {
+            <article class="project-item margin-l flex flex-column">
+                <img class="margin-m" [src]="project.img" [alt]="project.name" width="100%">
+                <h3 class="margin-s">{{ project.name }}</h3>
+                <p class="margin-m">{{ project.description }}</p>
+                <button class="btn btn-black btn-shadow right">Project details</button>
+            </article>
+        }
+    </div>
 </section>

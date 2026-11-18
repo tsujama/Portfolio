@@ -1,5 +1,84 @@
 @use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
 
 .contact {
     @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/06_Contact.webp");
+}
+
+.contact-form {
+    width: 100%;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1.5rem 1rem;
+        border-bottom: 1px solid vars.$color-primary;
+
+        label {
+            font-size: vars.$font-2xl;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: vars.$text-white;
+            font: inherit;
+            font-size: vars.$font-lg;
+            padding: 0;
+
+            &::placeholder {
+                color: vars.$text-white;
+                opacity: 1;
+            }
+        }
+    }
+
+    .privacy-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+
+        input {
+            margin-top: 0.25rem;
+            accent-color: vars.$color-primary;
+        }
+
+        label {
+            font-size: vars.$font-base;
+            line-height: 1.4;
+        }
+
+        a {
+            color: vars.$color-secondary;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    input[type="submit"] {
+        align-self: flex-end;
+        width: 50%;
+        border-radius: 2rem;
+        background: transparent;
+        color: vars.$text-white;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid vars.$color-secondary;
+        border-radius: 3px;
+        background: transparent;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .submit-wrapper {
+        display: flex;
+    }
+
+
 }
