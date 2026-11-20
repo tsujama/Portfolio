@@ -1,11 +1,13 @@
-<footer class="footer text-white">
+<footer class="footer" 
+    [class.text-white]="textColor !== 'black'"
+    [class.text-black]="textColor === 'black'">
     <div class="footer-top">
         <a class="logo" href="/">MR</a>
         <p>© Michelle Reuter 2026</p>
     </div>
 
     <nav class="navigation">
-        <a class="legal-notice" href="#legal-notice">Legal Notice</a>
+        <a class="legal-notice" [routerLink]="['legal-notice']">Legal Notice</a>
         <a href="https://github.com/tsujama/" target="_blank">GitHub</a>
         <a href="https://de.linkedin.com/" target="_blank">LinkedIn</a>
         <a href="mailto:michelle.reuter1998@web.de">Email</a>

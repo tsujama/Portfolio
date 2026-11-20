@@ -1,5 +1,3 @@
-@use "./styles/mixins" as mixins;
-
 :host {
     display: flex;
     flex-direction: column;
@@ -8,8 +6,4 @@
 
 main {
     flex: 1;
-}
-
-.contact-background {
-     @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/06_Contact.webp");
 }

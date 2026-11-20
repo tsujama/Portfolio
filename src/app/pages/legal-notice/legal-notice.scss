@@ -1,0 +1,36 @@
+.heading-wrapper {
+    height: clamp(250px, 35vh, 400px);
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 16px;
+
+    position: relative;
+
+    background-image: url("/Design material/01_Background/Design Size Relation@3x/01_Hero.webp");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+.heading-h2 {
+    margin: 0;
+}
+
+main {
+    padding: 0 16px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    p {
+        font-weight: bold;
+    }
+}
