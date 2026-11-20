@@ -1,5 +1,6 @@
 @use '../../styles/mixins' as mixins;
 @use '../../styles/variables' as vars;
+@use '../../styles/fonts' as fonts;
 
 .skills {
     @include mixins.section-background("/Design material/01_Background/Design Size Relation@3x/03_Skills.webp");
@@ -31,7 +32,7 @@
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: vars.$spacing-m;
+    gap: vars.$spacing-l;
     padding-bottom: vars.$spacing-2xl;
 }
 
@@ -55,12 +56,27 @@
 
 .pull-to-peel {
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 4;
+    background-image: url("/Design material/03_Stickers/01_Skills - Peel off/Color option 2/A.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(10deg);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     img {
-        padding-top: 50px;
-        padding-right: 8px;
-        object-fit: contain;
-        transform: rotate(10deg);
+        padding-right: vars.$spacing-s;
+    }
+
+
+    p {
+    font-family: fonts.$font-secondary;
+    font-size: vars.$font-4xl;
+    text-align: center;
+    padding: 8px 32px;
+    line-height: 1;
     }
 }

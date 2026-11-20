@@ -16,7 +16,13 @@
                 Let's collaborate and build something remarkable together!
             </p>
             <div class="right">
-                <button class="btn btn-black">Let's talk</button>
+               <a
+                    href="#contact"
+                    class="btn btn-black"
+                    [class.clicked]="isClicked"
+                    (click)="isClicked = true">
+                    Let's talk
+                </a>
             </div>
         </div>
         <div class="wrapper flex-center flex-column">

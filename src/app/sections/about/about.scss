@@ -26,6 +26,19 @@
     }
 }
 
+.btn {
+    text-decoration: none;
+
+    a {
+        color: inherit;
+    }
+
+    &.clicked {
+        background-color: vars.$color-secondary;
+        color: vars.$text-white;
+    }
+}
+
 .wrapper {
     height: 400px;
 

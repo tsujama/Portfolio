@@ -13,6 +13,20 @@
     font-size: vars.$font-6xl;
 }
 
+.btn {
+    text-decoration: none;
+    box-shadow: none;
+
+    a {
+        color: inherit;
+    }
+
+    &.clicked {
+        background-color: vars.$color-secondary;
+        color: vars.$text-white;
+    }
+}
+
 .content-wrapper {
     min-height: calc(100vh - 75px);
     width: 100%;
